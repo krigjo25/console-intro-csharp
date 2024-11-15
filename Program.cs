@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace terminal_intro_c_
+namespace console_basics_cs
 {
     internal class ConsoleApp
     {
@@ -32,12 +32,11 @@ namespace terminal_intro_c_
                 if (confirm == "yes" || confirm == "y" || confirm == "ye")
                 {
                     Console.WriteLine($"How awesome, i'm happy i had the chance to meet you ! {uname}\n press any key to continue");
-                    Console.ReadKey();
                     isRunning = false;
                 }
                 else
                 {
-                    Console.WriteLine(" Im sad to hear that it was wrong, but its okay. Lets try again");
+                    Console.WriteLine(" I'm sad to hear that it was wrong, but its okay. Lets try again");
                     continue;
                 }
             }
@@ -45,7 +44,7 @@ namespace terminal_intro_c_
             //  Call Class
             TypingValues.main();
             VariableAssignment.main();
-
+            FundamentalsCS.main();
 
             Console.ReadKey();
 

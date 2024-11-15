@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "terminal-intro-c#", "terminal-intro-c#.csproj", "{7D424328-FC98-4829-8F46-34FCD042EF26}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "console-basics-cs", "console-basics-cs.csproj", "{7D424328-FC98-4829-8F46-34FCD042EF26}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
