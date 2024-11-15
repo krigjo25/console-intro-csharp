@@ -1,8 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿// Project: console-basics-cs                Author: @Krigjo25
+// Date:  2024-11-15                         Description:  A simple console application that demonstrates the basics of C# programming language
+//
+using System;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace console_basics_cs
 {
@@ -41,9 +44,9 @@ namespace console_basics_cs
                 }
             }
 
-            //  Call Class
-            // TypingValues.main();
-            //VariableAssignment.main();
+            //  Call Classes
+            //  TypingValues.main();
+            //  VariableAssignment.main();
             FundamentalsCS.main();
 
             Console.ReadKey();
@@ -53,7 +56,7 @@ namespace console_basics_cs
     }
 
     //  A Public class that inherits from ConsoelApp
-    public class TypingValues
+    internal class TypingValues
 
     {
         //  Initializing value
@@ -120,7 +123,7 @@ namespace console_basics_cs
 
     }
 
-    public class VariableAssignment
+   internal class VariableAssignment
     {
         public static void main()
         {

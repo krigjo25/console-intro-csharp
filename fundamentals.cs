@@ -9,31 +9,21 @@ namespace console_basics_cs
         //   Initialize max value
         private const int max = 60;
 
-        //   Initialize a Data Structure called hobby
-        protected private List<string> hobbies = new List<string>();
+        //   Initialize a Data Structure called hobby within the class
+        private List<string> hobbies = new List<string>();
 
         public static void main()
         {
             //  Ensures that the prompt one is the same as prompt two
-            ComparePrompts();
+            //ComparePrompts();
 
             //  Guess the number between 10 and 30
-            GuessTheNUmber();
+            //GuessTheNUmber();
 
-            //  Generate a new Hobby
-            Console.WriteLine("Would you like to generate a random hobby");
+            //  Generate a new Hobb
+            FundamentalsCS fcs = new FundamentalsCS();
+            fcs.InteractiveHobbyGenerator();
 
-            string answer = Console.ReadLine().ToLower();
-
-            if (answer == "yes" || answer == "ye" || answer == "y")
-            {
-                FundamentalsCS fcs = new FundamentalsCS();
-                fcs.InteractiveHobbyGenerator();
-            }
-            else
-            {
-                Console.WriteLine("Thats alright !\nSee you later !");
-            }
             return;
         }
 
@@ -72,44 +62,51 @@ namespace console_basics_cs
 
         internal void InteractiveHobbyGenerator()
         {
+            Console.WriteLine("Would you like to generate a random hobby");
+
+            string answer = Console.ReadLine().ToLower();
+
+            if (answer == "yes" || answer == "ye" || answer == "y")
+            {
 
             int i = 0;
 
-            while (i < max)
-            {
-                // Initialize a new hobby
-                string hobby = RandomGenerator.HobbyGenerator();
-
-                Console.WriteLine($"Is {hobby} a desired hobby for you?");
-                var answer = Console.ReadLine().ToLower();
-
-                //  Ensure the user is happy with the hobby
-                if (answer == "y" || answer == "yes" || answer == "ye")
+                while (i < max)
                 {
-                    //  Push hobby into a new array
-                    hobbies.Add(hobby);
+                    // Initialize a new hobby
+                    string hobby = RandomGenerator.HobbyGenerator();
 
-                    Console.WriteLine("Great! I'm happy you like it.\nWant a new hobby idea?");
-                    answer = Console.ReadLine();
+                    Console.WriteLine($"Is {hobby} a desired hobby for you?");
+                    answer = Console.ReadLine().ToLower();
 
-                    if (answer != "y" && answer != "yes" && answer != "ye")
+                    //  Ensure the user is happy with the hobby
+                    if (answer == "y" || answer == "yes" || answer == "ye")
                     {
-                        Console.WriteLine("Thats alright, enough hobbies generated today !");
-                        foreach (string element in hobbies)
+                        //  Push hobby into a new array
+                        hobbies.Add(hobby);
+
+                        Console.WriteLine("Great! I'm happy you like it.\nWant a new hobby idea?");
+                        answer = Console.ReadLine();
+
+                        if (answer != "y" && answer != "yes" && answer != "ye")
                         {
-                            Console.WriteLine($", you enjoy {element}");
+                            Console.WriteLine("Thats alright, enough hobbies generated today !");
+                            foreach (string element in hobbies)
+                            {
+                                Console.WriteLine($", you enjoy {element}");
+                            }
+                            break;
+
                         }
-                        break;
 
                     }
-
+                    else
+                    {
+                        Console.WriteLine("I'm sorry to hear that, I hope you find a hobby that you like.");
+                        break;
+                    }
+                    i++;
                 }
-                else
-                {
-                    Console.WriteLine("I'm sorry to hear that, I hope you find a hobby that you like.");
-                    break;
-                }
-                i++;
             }
             Console.WriteLine();
 
