@@ -42,8 +42,8 @@ namespace console_basics_cs
             }
 
             //  Call Class
-            TypingValues.main();
-            VariableAssignment.main();
+            // TypingValues.main();
+            //VariableAssignment.main();
             FundamentalsCS.main();
 
             Console.ReadKey();
@@ -82,7 +82,6 @@ namespace console_basics_cs
             assignment_one(array);
 
             Console.WriteLine(" Sum of " + number + " and " + num + " is " + assignment_two(num, decimal_num));
-            Console.ReadKey();
             
 
         }
